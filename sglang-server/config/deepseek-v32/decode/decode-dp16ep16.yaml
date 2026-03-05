@@ -1,0 +1,37 @@
+# API Info
+served-model-name: deepseek-v32
+chat-template: /sgl-workspace/sglang/examples/chat_template/tool_chat_template_deepseekv32.jinja
+tool-call-parser: deepseekv32
+reasoning-parser: deepseek-v3
+enable-cache-report: true
+# Server Info
+host: 0.0.0.0
+# Model Info
+model-path: /models/DeepSeek-V3.2
+trust-remote-code: true
+# Memory Management
+mem-fraction-static: 0.7
+max-running-requests: 256
+cuda-graph-max-bs: 32
+# Parallel
+tp: 16
+ep: 16
+enable-dp-attention: true
+enable-dp-lm-head: true
+moe-dense-tp-size: 1
+# Attention
+page-size: 64
+# MoE
+moe-a2a-backend: deepep
+deepep-mode: low_latency
+# PD Disaggregation
+disaggregation-mode: decode
+disaggregation-ib-device: mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_4,mlx5_5,mlx5_6,mlx5_7
+# Speculative Decode
+speculative-algorithm: EAGLE
+speculative-num-steps: 2
+speculative-eagle-topk: 1
+speculative-num-draft-tokens: 3
+# Other
+watchdog-timeout: 1000000
+
