@@ -11,7 +11,7 @@ model-path: /models/DeepSeek-V3.2
 trust-remote-code: true
 # Memory Management
 mem-fraction-static: 0.7
-max-running-requests: 128
+max-running-requests: 256
 cuda-graph-max-bs: 32
 # Parallel
 tp: 16

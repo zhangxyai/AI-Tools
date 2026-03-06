@@ -3,7 +3,7 @@ CONTAINER_NAME=sgl-model-gateway
 ROUTER_PORT=8000
 MODEL_PATH=$HOME/workspace
 
-docker run -itd --privileged=true --restart unless-stopped --ipc host --network host --name $SGLANG_NAME \
+docker run -itd --privileged=true --restart unless-stopped --ipc host --network host --name $CONTAINER_NAME \
     -v /lib/modules:/lib/modules \
     -v /dev:/dev \
     -v $MODEL_PATH:/models \
