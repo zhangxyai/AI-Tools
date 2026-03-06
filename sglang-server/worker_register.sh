@@ -9,8 +9,8 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
-WORKER_URL=\$1
-WORKER_TYPE=\$2
+WORKER_URL=$1
+WORKER_TYPE=$2
 
 # 检查 worker_type 是否合法
 # 定义允许的列表
