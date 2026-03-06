@@ -17,6 +17,7 @@ disable-cuda-graph: true
 # Parallel
 tp: 8
 ep: 8
+dp: 8
 enable-dp-attention: true
 load-balance-method: round_robin
 # Attention
