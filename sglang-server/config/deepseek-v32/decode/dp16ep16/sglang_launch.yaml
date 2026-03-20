@@ -1,6 +1,5 @@
 # API Info
 served-model-name: deepseek-v32
-chat-template: /sgl-workspace/sglang/examples/chat_template/tool_chat_template_deepseekv32.jinja
 tool-call-parser: deepseekv32
 reasoning-parser: deepseek-v3
 enable-cache-report: true
