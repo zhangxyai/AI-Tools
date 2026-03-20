@@ -25,6 +25,11 @@ def config_parser(config):
     test_mode = TestMode(config.get("test_mode", "all"))
     client = OpenAI(api_key=api_key, base_url=base_url)
     
+    print("\n---------------Test Info---------------")
+    print(f"Model Name: {model}")
+    print(f"Base URL: {base_url}")
+    print("---------------------------------------\n")
+    
     return client, model, test_mode
 
 
@@ -38,12 +43,13 @@ def test_simple(client, model):
         ]
     )
 
-    print("\n--- normal test respose ---")
+    print("\nSingle Test Response:")
+    print("---------------------------------------")
     print("Thinking:")
     print(response.choices[0].message.reasoning_content)
     print("Content:")
     print(response.choices[0].message.content)
-    print("\n----- normal test end -----")
+    print("---------------------------------------\n")
 
 
 def test_struct_output(client, model):
@@ -75,9 +81,10 @@ def test_struct_output(client, model):
         },
     )
 
-    print("\n--- struct output test respose ---")
+    print("\nStruct Output Test Response:")
+    print("---------------------------------------")
     print(response.choices[0].message.content)
-    print("\n----- struct output test end -----")
+    print("---------------------------------------\n")
 
 
 def test_funcation_call(client, model):
@@ -129,9 +136,12 @@ def test_funcation_call(client, model):
         tools=tools,
     )
 
-    print("==== content ====")
+
+    print("\nStruct Output Test Response:")
+    print("---------------------------------------")
+    print("First Response Context:")
     print(response.choices[0].message.content)
-    print("==== tool_calls ====")
+    print("\n\nTool Calls:")
     print(response.choices[0].message.tool_calls)
     
     def get_current_weather(city: str, state: str, unit: "str"):
@@ -165,8 +175,9 @@ def test_funcation_call(client, model):
         tools=tools,
     )
  
-    print("==== final response ====")
+    print("\n\n\nFinal Response: ")
     print(final_response.choices[0].message.content)
+    print("---------------------------------------\n")
 
 
 if __name__ == "__main__":
