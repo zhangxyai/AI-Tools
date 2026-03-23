@@ -12,6 +12,7 @@ trust-remote-code: true
 mem-fraction-static: 0.7
 max-running-requests: 128
 cuda-graph-max-bs: 32
+context-length: 131072
 # Parallel
 nnodes: 2
 tp: 16
