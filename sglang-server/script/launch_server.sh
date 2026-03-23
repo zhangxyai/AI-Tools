@@ -8,18 +8,18 @@ if [ $# -ne 2 ]; then
 fi
 
 
-SGLANG_CONFIG_FILE="\$1"
-ENV_FILE="\$2"
+SGLANG_CONFIG_FILE=$1
+ENV_FILE=$2
 
 # 2. 检查文件是否存在
-if [ ! -f "$ENV_FILE" ]; then
+if [ ! -f $ENV_FILE ]; then
     echo "错误：文件 '$ENV_FILE' 不存在或不是一个常规文件！"
     exit 1
 fi
 
 # 3. Source 该文件
 # 注意：如果文件内容有语法错误，source 会失败，这里捕获错误
-if ! source "$ENV_FILE"; then
+if ! source $ENV_FILE; then
     echo "错误：加载文件 '$ENV_FILE' 失败，请检查文件内容语法。"
     exit 1
 fi
