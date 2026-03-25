@@ -35,8 +35,7 @@ docker run -itd --restart unless-stopped \
         ${prefill_args} \
         ${decode_args} \
         --host 0.0.0.0 \
-	--port $ROUTER_PORT \
+	    --port $ROUTER_PORT \
         --max-concurrent-requests 4096 \
         --health-check-interval-secs 5 \
-        --prefill-policy bucket \
-        --backend openai
+        --prefill-policy bucket

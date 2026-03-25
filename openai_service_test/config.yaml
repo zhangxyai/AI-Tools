@@ -1,5 +1,5 @@
 model: deepseek-v32
-base_url: http://localhost:30000/v1
+base_url: http://localhost:8000/v1
 api_key: "empty"
 test_mode: "all"
 # test_mode: "simple"
