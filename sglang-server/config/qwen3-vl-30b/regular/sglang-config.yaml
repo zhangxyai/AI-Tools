@@ -1,5 +1,5 @@
-served-model-name: qwen3-vl-32b-instruct
-model: /models/Qwen3-VL-32B-Instruct-FP8
+served-model-name: qwen3-vl-30b
+model: /models/Qwen3-VL-30B-A3B-Instruct-FP8
 trust-remote-code: true
 tool-call-parser: qwen25
 enable-cache-report: true
