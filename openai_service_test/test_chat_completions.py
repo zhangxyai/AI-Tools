@@ -71,7 +71,7 @@ def test_struct_output(client, model):
             {"role": "user", "content": "请帮我整理中国首都的信息"}
         ],
         temperature=0,
-        max_tokens=128,
+        max_tokens=4096,
         response_format={
             "type": "json_schema",
             "json_schema": {
@@ -131,7 +131,7 @@ def test_funcation_call(client, model):
         messages=messages,
         temperature=0,
         top_p=0.95,
-        max_tokens=1024,
+        max_tokens=4096,
         stream=False,  # Non-streaming
         tools=tools,
     )

@@ -2,24 +2,24 @@
 ## regular: 测Prefill+Decode的整体服务性能
 ## prefill: PD分离部署，只测试Prefill性能，只记录 input_tokens, output_tokens, concurrency, number, ttft, p90_ttft, input_token_throughput
 ## decode: PD分离部署，只测试Decode性能，只记录 input_tokens, prefix_length, output_tokens, tpot, p90_tpot, concurrency, number, output_token_throughput
-mode: regular
+mode: prefill
 ## result文件默认文件名为: model+mode+result_file
 result_file: result.csv
 ## model config
 model_config:
   model: deepseek-v32
-  url: http://localhost:30000/v1/chat/completions
+  url: http://localhost:8000/v1/chat/completions
   api: openai
   api_key: empty
   tokenizer_path: /home/sophgo/models/DeepSeek-V3.2
 ## perf config
 perf_config:
   # 最大并发数
-  concurrency: [64]
+  concurrency: [8]
   # 测试轮数。测试总请求数 number = concurrency * epoch
-  epoch: 10
+  epoch: 1
   # 输入长度
-  input_tokens: [1024]
+  input_tokens: [6553]
   # 输出长度，prefill模式下强制修改为1
   output_tokens: [1024]
   

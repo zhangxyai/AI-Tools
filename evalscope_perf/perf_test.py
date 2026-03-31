@@ -210,7 +210,7 @@ def run_auto_test(config_path):
     total_test_count = len(input_tokens) * len(output_tokens) * len(concurrency_list)
     for i in range(len(input_tokens)):
         input_token = input_tokens[i]
-        prefix_length = prefix_length[i]
+        prefix_len = prefix_length[i]
         
         for j in range(len(output_tokens)):
             output_token = output_tokens[j]
@@ -228,7 +228,7 @@ def run_auto_test(config_path):
                     'max_prompt_length': input_token,
                     'min_tokens': output_token,
                     'max_tokens': output_token,
-                    'prefix_length': prefix_length,
+                    'prefix_length': prefix_len,
                     'input_tokens': input_token,
                     'output_tokens': output_token
                 }

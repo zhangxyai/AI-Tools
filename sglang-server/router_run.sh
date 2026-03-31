@@ -6,10 +6,10 @@ CONTAINER_NAME=sgl-model-gateway-$HUGGINGFACE_DIR_NAME
 
 
 prefill_urls=(
-    "http://172.26.168.32:30000"
+    "http://172.26.168.44:30000"
 )
 decode_urls=(
-    "http://172.26.168.33:30000"
+    "http://172.26.168.31:30000"
 )
 
 prefill_args=""
