@@ -6,7 +6,7 @@ enable-cache-report: true
 # Server Info
 host: 0.0.0.0
 # Model Info
-model-path: /models/GLM-5.1
+model-path: /models/GLM-5.1-FP8
 trust-remote-code: true
 # Memory Management
 mem-fraction-static: 0.8

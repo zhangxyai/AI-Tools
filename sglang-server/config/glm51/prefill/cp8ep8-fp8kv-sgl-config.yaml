@@ -16,9 +16,12 @@ disable-cuda-graph: true
 # Parallel
 tp: 8
 ep: 8
-dp: 8
-enable-dp-attention: true
-load-balance-method: round_robin
+# dp: 8
+# enable-dp-attention: true
+# load-balance-method: round_robin
+enable-nsa-prefill-context-parallel: true
+attn-cp-size: 8
+nsa-prefill-cp-mode: round-robin-split
 # Attention
 attention-backend: nsa
 nsa-prefill-backend: flashmla_auto
