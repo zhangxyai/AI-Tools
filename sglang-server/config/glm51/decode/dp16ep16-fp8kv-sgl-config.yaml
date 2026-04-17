@@ -23,6 +23,9 @@ enable-dp-lm-head: true
 moe-dense-tp-size: 1
 # Attention
 page-size: 64
+attention-backend: nsa
+nsa-decode-backend: flashmla_kv
+kv-cache-dtype: fp8_e4m3
 # MoE
 moe-a2a-backend: deepep
 deepep-mode: low_latency
