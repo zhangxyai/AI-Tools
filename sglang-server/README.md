@@ -28,6 +28,6 @@ bash docker_run.sh config/glm51/regular/pp8-fp8kv-deploy.env
 #以glm5.1为例
 bash docker_run.sh config/glm51/prefill/cp8ep8-fp8kv-deploy.env
 bash docker_run.sh config/glm51/decode/dp8ep8-fp8kv-deploy.env
-# 需要根据实际工作节点服务的url修改脚本里的urls
+# 需要根据实际工作节点服务的url修改脚本里的prefill_urls && decode_urls
 bash router_run.sh
 ```
