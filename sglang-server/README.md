@@ -17,11 +17,17 @@
 
 ```bash
 bash docker_run.sh deploy_env_path
+
+# 以glm5.1为例子
+bash docker_run.sh config/glm51/regular/pp8-fp8kv-deploy.env
 ```
 
 ### PD router节点启动
 
 ```bash
+#以glm5.1为例
+bash docker_run.sh config/glm51/prefill/cp8ep8-fp8kv-deploy.env
+bash docker_run.sh config/glm51/decode/dp8ep8-fp8kv-deploy.env
 # 需要根据实际工作节点服务的url修改脚本里的urls
 bash router_run.sh
 ```
