@@ -3,3 +3,33 @@
 ## 模型列表
 
 - deepseek-v32
+- glm5.1
+
+## 工作节点类型
+
+- prefill: PD分离部署的Prefill节点。
+- decode: PD分离部署的Decode节点。
+- regular: 非PD分离部署。
+
+## 部署方式
+
+在启动节点前，请优先检查config目录对应的.env和.yaml文件中的docker镜像版本、模型文件路径，是否与实际部署环境匹配。
+
+### 工作节点启动
+
+```bash
+bash docker_run.sh deploy_env_path
+
+# 以glm5.1为例子
+bash docker_run.sh config/glm51/regular/pp8-fp8kv-deploy.env
+```
+
+### PD router节点启动
+
+```bash
+#以glm5.1为例
+bash docker_run.sh config/glm51/prefill/cp8ep8-fp8kv-deploy.env
+bash docker_run.sh config/glm51/decode/dp8ep8-fp8kv-deploy.env
+# 需要根据实际工作节点服务的url修改脚本里的prefill_urls && decode_urls
+bash router_run.sh
+```
