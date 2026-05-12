@@ -1,0 +1,24 @@
+# API Info
+served-model-name: deepseek-v4-flash
+tool-call-parser: deepseekv4
+reasoning-parser: deepseek-v4
+enable-cache-report: true
+# Server Info
+host: 0.0.0.0
+# Model Info
+model-path: /models/DeepSeek-V4-Pro
+trust-remote-code: true
+# Memory Management
+mem-fraction-static: 0.88
+max-running-requests: 64
+# Parallel
+tp: 8
+moe-runner-backend: marlin
+# Speculative Decode
+speculative-algorithm: EAGLE
+speculative-num-steps: 3
+speculative-eagle-topk: 1
+speculative-num-draft-tokens: 4
+# Other
+watchdog-timeout: 1000000
+
