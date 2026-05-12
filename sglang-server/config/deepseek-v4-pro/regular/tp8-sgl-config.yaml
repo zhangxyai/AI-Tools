@@ -1,5 +1,5 @@
 # API Info
-served-model-name: deepseek-v4-flash
+served-model-name: deepseek-v4-pro
 tool-call-parser: deepseekv4
 reasoning-parser: deepseek-v4
 enable-cache-report: true
